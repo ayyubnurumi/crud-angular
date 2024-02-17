@@ -1,0 +1,22 @@
+<div>
+    <h2>Add Employee</h2>
+    <form>
+      <div>
+        <label>Name:</label>
+        <input type="text" [(ngModel)]="newEmployee.name" name="name" required>
+      </div>
+      <div>
+        <label>Gender:</label>
+        <select [(ngModel)]="newEmployee.gender" name="gender" required>
+          <option value="Male">Male</option>
+          <option value="Female">Female</option>
+        </select>
+      </div>
+      <div>
+        <label>Date of Birth:</label>
+        <input type="date" [(ngModel)]="newEmployee.dob" name="dob" required>
+      </div>
+      <button (click)="addEmployee()">Add Employee</button>
+    </form>
+  </div>
+  

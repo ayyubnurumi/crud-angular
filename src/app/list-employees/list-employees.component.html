@@ -1,0 +1,33 @@
+<!-- list-employees.component.html -->
+
+<div class="container">
+    <h2>List of Employees</h2>
+    <button routerLink="/add">Add New Employee</button>
+
+    <table class="table">
+      <thead>
+        <tr>
+          <th>No.</th>
+          <th>ID</th>
+          <th>Name</th>
+          <th>Gender</th>
+          <th>DOB</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let employee of employees; let i = index">
+          <td>{{ i + 1 }}</td>
+          <td>{{ employee.id }}</td>
+          <td>{{ employee.name }}</td>
+          <td>{{ employee.gender }}</td>
+          <td>{{ employee.dob }}</td>
+          <td>
+            <a routerLink="/edit/{{ employee.id }}">Edit</a> | 
+            <a routerLink="/detail/{{ employee.id }}">View Detail</a>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  
